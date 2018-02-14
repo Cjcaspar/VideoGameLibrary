@@ -24,7 +24,9 @@ public class Game {
         return name;
     }
 
-    public void setName() {
+    public void setName()
+    {   /**This logic should be in the library, as it's a library's responsibility to ask you which game you should add to it. The responsibility of a setter
+     is literally to only set. 0 logic, otherwise.*/
         System.out.println("What is the name of your game?");
         name = scan.nextLine();
     }
@@ -34,6 +36,7 @@ public class Game {
     }
 
     public void setGenre() {
+        /**Also should be responsibility of library class. */
         System.out.println("What is the genre of your game?");
         genre = scan.nextLine();
     }
@@ -43,6 +46,7 @@ public class Game {
     }
 
     public void setReleaseYear() {
+        /**Also should be responsibility of library class. */
         System.out.println("What year was your game released?");
         releaseYear = scan.nextInt();
     }

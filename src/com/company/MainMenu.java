@@ -5,6 +5,10 @@ public class MainMenu {
     Scanner scan = new Scanner(System.in);
 
     public void mainMenu () {
+        /**You don't want a functionality class for this communication; you want all of these to be the responsibility of the library-itself.
+         * Just like in real life, a library adds, removes, checks in, and checks out things. Also, better naming conventions as 'f' isn't verbose
+         * Personally, I'd use the library class for instantiating and displaying the menu, also, as it should be its job to give you options. Using the
+         * library as the aggregator of all classes to perform its job of adding, removing, checking in, and checking out games.*/
         Functionality f = new Functionality();
         System.out.println("Welcome to the games library!");
         List<Game> library = new ArrayList<>();
