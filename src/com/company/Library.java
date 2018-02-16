@@ -6,20 +6,19 @@ import java.util.Scanner;
 
 public class Library {
 
-    Scanner scan = new Scanner(System.in);
+    private Scanner scan = new Scanner(System.in);
 
-    Menu menu = new Menu();
-    List<Game> library = new ArrayList<>();
-    List<Game> out = new ArrayList<>();
-    List<Game> all = new ArrayList<>();
+    private List<Game> library = new ArrayList<>();
+    private List<Game> out = new ArrayList<>();
+    private List<Game> all = new ArrayList<>();
 
-    public void addGame(Game game, List<Game> library, List<Game> all) {
+    private void addGame(Game game, List<Game> library, List<Game> all) {
         library.add(game);
         all.add(game);
         System.out.println(game.getName() + " has been added to your library");
     }
 
-    public void removeGame(List<Game> library) {
+    private void removeGame(List<Game> library) {
 
         if (library.size() <= 0) {
             System.out.println("You have no games in your library.");
@@ -42,7 +41,7 @@ public class Library {
         }
     }
 
-    public void viewLibrary(List<Game> library) {
+    private void viewLibrary(List<Game> library) {
 
         if (library.size() <= 0) {
             System.out.println("You have no games in your library");
@@ -59,7 +58,7 @@ public class Library {
         }
     }
 
-    public void checkOut(List<Game> library, List<Game> out) {
+    private void checkOut(List<Game> library, List<Game> out) {
 
         if (library.size() <= 0) {
             System.out.println("You have no games in your library.");
@@ -82,7 +81,7 @@ public class Library {
         }
     }
 
-    public void checkIn(List<Game> library, List<Game> out) {
+    private void checkIn(List<Game> library, List<Game> out) {
 
         if (out.size() <= 0) {
             System.out.println("You have no games to check in.");
@@ -105,7 +104,7 @@ public class Library {
         }
     }
 
-    public void viewOut(List<Game> out) {
+    private void viewOut(List<Game> out) {
 
         if (out.size() <= 0) {
             System.out.println("You have no games checked out.");
@@ -121,7 +120,7 @@ public class Library {
         }
     }
 
-    public void gameInfo(List<Game> all) {
+    private void gameInfo(List<Game> all) {
 
         if (all.size() <= 0) {
             System.out.println("You have no games on record");
@@ -187,17 +186,17 @@ public class Library {
         }
     }
 
-    public String gameName() {
+    private String gameName() {
         System.out.println("What is the name of your game?");
         return scan.nextLine();
     }
 
-    public String gameGenre() {
+    private String gameGenre() {
         System.out.println("What is the genre of your game?");
         return scan.nextLine();
     }
 
-    public int gameYear() {
+    private int gameYear() {
         System.out.println("What year was your game released?");
         return scan.nextInt();
     }

@@ -8,7 +8,7 @@ public class Game {
     private String genre;
     private int releaseYear;
 
-    public Game(String name, String genre, int releaseYear) {
+    Game(String name, String genre, int releaseYear) {
         this.name = name;
         this.genre = genre;
         this.releaseYear = releaseYear;
